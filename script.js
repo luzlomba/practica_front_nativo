@@ -1,35 +1,44 @@
 const cards = [
   {
-    title: "Card 1",
+    title: "Crema Facial",
     description: "This is the description for Card 1.",
-    image: "https://via.placeholder.com/150"
+    image: "https://i.postimg.cc/QBJbddjZ/cremas.png",
+    price: "200",
   },
   {
-    title: "Card 2",
+    title: "Esmalte",
     description: "This is the description for Card 2.",
-    image: "https://via.placeholder.com/150",
+    image: "https://i.postimg.cc/Nyk4jjQt/esmaltes.png",
+    price: "150",
   },
   {
-    title: "Card 3",
+    title: "Labial",
     description: "This is the description for Card 3.",
-    image: "https://via.placeholder.com/150",
+    image: "https://i.postimg.cc/zLFjGGq5/labiales.png",
+    price: "800",
   },
   {
-    title: "Card 4",
+    title: "Sombras",
     description: "This is the description for Card 4.",
-    image: "https://via.placeholder.com/150",
+    image: "https://i.postimg.cc/rdNJwwMP/sombras.png",
+    price: "550",
   },
   {
-    title: "Card 5",
+    title: "Brochas",
     description: "This is the description for Card 5.",
-    image: "https://via.placeholder.com/150",
+    image: "https://i.postimg.cc/D8zyCjSG/brochas.png",
+    price: "320",
   },
   {
-    title: "Card 6",
+    title: "Rimmel",
     description: "This is the description for Card 6.",
-    image: "https://via.placeholder.com/150",
+    image: "https://i.postimg.cc/1fz5WC8v/rimmel.png",
+    price: "150",
   }
 ]
+
+/* Enlace a la galeria
+https://postimg.cc/gallery/gZ92wzd */
 
 const cardContainer = document.getElementById("cards");
 
@@ -49,11 +58,17 @@ cards.forEach(card => {
   const descriptionElement = document.createElement("p");
   descriptionElement.textContent = card.description;
 
+  const priceElement = document.createElement("p");
+  priceElement.classList.add("price");
+  priceElement.textContent = `$ ${card.price}`;
+
   cardElement.appendChild(imageElement);
   cardElement.appendChild(titleElement);
   cardElement.appendChild(descriptionElement);
+  
 
   cardContainer.appendChild(cardElement);
+  cardElement.appendChild(priceElement);
 });
 
 

@@ -1,7 +1,7 @@
-* {
+/** {
   border: 1px solid sienna;
-}
-
+}*/
+/*elimino los bordes de todo*/
 
 header {
   width: 100%;
@@ -26,6 +26,7 @@ main {
 .card {
   width: 200px;
   height: 200px;
+  border: 1px solid rgb(0, 0, 0);
   /* display: inline-block;
   text-align: center; */
 }
@@ -33,4 +34,28 @@ main {
 footer {
   width: 100%;
   height: 100px;
+}
+
+/* CENTRO INICIO Y PRODUCTO*/
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Esto alinea los elementos horizontalmente al centro */
+    list-style: none;       /* Quita los puntos del listado */
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;         /* Espacio entre inicio y producto */
+}
+
+div ul {
+    display: flex;
+    justify-content: center; /* Esto alinea los elementos horizontalmente al centro */
+    list-style: none;       /* Quita los puntos del listado */
+    padding: 0;
+}
+
+div li {
+    margin: 0 15px;         /* Espacio entre inicio y producto */
 }
