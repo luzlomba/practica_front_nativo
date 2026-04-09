@@ -1,7 +1,12 @@
 /** {
   border: 1px solid sienna;
-}*/
-/*elimino los bordes de todo*/
+} */
+/* elimino los bordes de todo */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
 header {
   width: 100%;
@@ -10,7 +15,8 @@ header {
 
 main {
   width: 100%;
-  height: 500px;
+  /* height: 500px; elimino altura fija del main */
+  padding: 20px;
 }
 
 .cards{
@@ -25,37 +31,78 @@ main {
 
 .card {
   width: 200px;
-  height: 200px;
+  /* height: 200px; saco la altura fija */
+  padding: 10px;
   border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   /* display: inline-block;
   text-align: center; */
 }
 
+.card img {
+  max-width: 100%;
+}
+
 footer {
   width: 100%;
-  height: 100px;
+  /* height: 100px; le saco la altura fija para evitar superposición con las cards */
+  padding: 10px;
 }
 
 /* CENTRO INICIO Y PRODUCTO*/
 
 nav ul {
     display: flex;
-    justify-content: center; /* Esto alinea los elementos horizontalmente al centro */
-    list-style: none;       /* Quita los puntos del listado */
+    justify-content: center; /* centra horizontalmente */
+    list-style: none; /* saca los puntos del listado */
     padding: 0;
 }
 
 nav li {
-    margin: 0 15px;         /* Espacio entre inicio y producto */
+    margin: 0 15px; /* espacio entre inicio y producto */
 }
 
-div ul {
+/* ESTETICA DE LOS BOTONES INICIO Y PRODUCTO */
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #e0e0e0;
+    border-color: #999; /* cambia el borde al pasar el mouse */
+}
+
+/* CENTRAR IG YT WPP */
+
+.networks ul {
     display: flex;
-    justify-content: center; /* Esto alinea los elementos horizontalmente al centro */
-    list-style: none;       /* Quita los puntos del listado */
+    justify-content: center;
+    list-style: none;
     padding: 0;
 }
 
-div li {
-    margin: 0 15px;         /* Espacio entre inicio y producto */
+.networks li {
+    margin: 0 15px;
+}
+
+/* ESTETICA BOTONES IG YT WPP*/
+
+.networks a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 50%; /* redondea los bordes */
+    display: inline-block;
+}
+
+.networks a:hover {
+    background-color: #eee;
 }
