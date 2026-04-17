@@ -1,44 +1,47 @@
 const cards = [
   {
-    title: "Crema Facial",
-    description: "This is the description for Card 1.",
-    image: "https://i.postimg.cc/QBJbddjZ/cremas.png",
-    price: "200",
+    name: "Harry Potter",
+    house: "Gryffindor",
+    description: "El niño que vivió. Sobrevivió al ataque de Voldemort de bebé y es el elegido para derrotarlo.",
+    image: "https://cdn.shopify.com/s/files/1/1943/7257/files/Harry-Potter_large_0dad831f-4b4a-4db5-b0eb-f96e70436102_large.jpg?v=1514443105",
+    actor: "Daniel Radcliffe"
   },
   {
-    title: "Esmalte",
-    description: "This is the description for Card 2.",
-    image: "https://i.postimg.cc/Nyk4jjQt/esmaltes.png",
-    price: "150",
+    name: "Hermione Granger",
+    house: "Gryffindor",
+    description: "La mejor estudiante de Hogwarts. Su inteligencia y valentía son clave para enfrentar a las fuerzas del mal.",
+    image: "https://hp-api.onrender.com/images/hermione.jpeg",
+    actor: "Emma Watson"
   },
   {
-    title: "Labial",
-    description: "This is the description for Card 3.",
-    image: "https://i.postimg.cc/zLFjGGq5/labiales.png",
-    price: "800",
+    name: "Ron Weasley",
+    house: "Gryffindor",
+    description: "El leal mejor amigo de Harry. Proviene de una familia de magos de corazón noble.",
+    image: "https://hp-api.onrender.com/images/ron.jpg",
+    actor: "Rupert Grint"
   },
   {
-    title: "Sombras",
-    description: "This is the description for Card 4.",
-    image: "https://i.postimg.cc/rdNJwwMP/sombras.png",
-    price: "550",
+    name: "Draco Malfoy",
+    house: "Slytherin",
+    description: "Rival de Harry en Hogwarts. Criado en una familia de magos de sangre pura con vínculos a Voldemort.",
+    image: "https://hp-api.onrender.com/images/draco.jpg",
+    actor: "Tom Felton"
   },
   {
-    title: "Brochas",
-    description: "This is the description for Card 5.",
-    image: "https://i.postimg.cc/D8zyCjSG/brochas.png",
-    price: "320",
+    name: "Albus Dumbledore",
+    house: "Gryffindor",
+    description: "El director de Hogwarts y el mago más poderoso de su época. Guía y protector de Harry.",
+    image: "https://static.wikia.nocookie.net/wikihp/images/8/88/Dumbledore.jpg/revision/latest/scale-to-width-down/340?cb=20090911073332&path-prefix=es",
+    actor: "Richard Harris / Michael Gambon"
   },
   {
-    title: "Rimmel",
-    description: "This is the description for Card 6.",
-    image: "https://i.postimg.cc/1fz5WC8v/rimmel.png",
-    price: "150",
+    name: "Severus Snape",
+    house: "Slytherin",
+    description: "Profesor de Pociones de Hogwarts. Misterioso y severo, esconde un pasado complejo y doloroso.",
+    image: "https://hp-api.onrender.com/images/snape.jpg",
+    actor: "Alan Rickman"
   }
 ]
-
-/* Enlace a la galeria
-https://postimg.cc/gallery/gZ92wzd */
 
 const cardContainer = document.getElementById("cards");
 
@@ -50,25 +53,27 @@ cards.forEach(card => {
 
   const imageElement = document.createElement("img");
   imageElement.src = card.image;
-  imageElement.alt = card.title;
 
-  const titleElement = document.createElement("h2");
-  titleElement.textContent = card.title;
+  const titleActor = document.createElement("p");
+  titleActor.textContent = `Actor: ${card.actor}`;
+
+  const titleName = document.createElement("h2");
+  titleName.textContent = card.name;
 
   const descriptionElement = document.createElement("p");
   descriptionElement.textContent = card.description;
 
-  const priceElement = document.createElement("p");
-  priceElement.classList.add("price");
-  priceElement.textContent = `$ ${card.price}`;
+  const descriptionHouse = document.createElement("p");
+  descriptionHouse.textContent = `Casa: ${card.house}`;
+
 
   cardElement.appendChild(imageElement);
-  cardElement.appendChild(titleElement);
+  cardElement.appendChild(titleName);
   cardElement.appendChild(descriptionElement);
-  
+  cardElement.appendChild(descriptionHouse);
+  cardElement.appendChild(titleActor);
 
   cardContainer.appendChild(cardElement);
-  cardElement.appendChild(priceElement);
 });
 
 
