@@ -5,7 +5,9 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "MedievalSharp", cursive;
+  background-color: #f4e4c1;
+  color: #3b1f0a;
 }
 
 header {
@@ -62,6 +64,7 @@ nav ul {
 
 nav li {
     margin: 0 15px; /* espacio entre inicio y producto */
+    cursor: pointer;
 }
 
 /* ESTETICA DE LOS BOTONES INICIO Y PRODUCTO */
